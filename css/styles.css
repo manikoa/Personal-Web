@@ -1,0 +1,29 @@
+body {
+    margin: 0;
+    text-align: center;
+    background-color: #ECF2FF;
+    font-family: 'Merriweather', sans-serif;
+}
+hr {
+    border-style: none;
+    border-top-style: dotted;
+    border-color: grey;
+    border-width: 5px;
+    width: 5%
+}
+h3{
+    font-family: 'Montserrat', sans-serif;
+    color: goldenrod;
+}
+
+h2{
+    font-size: 562.5%;
+    font-family: 'Sacramento', cursive;
+    margin: 0 auto 0 auto 0;
+    color: #AEC2B6;
+    
+    
+}
+.Bottom-python {
+    position: absolute;
+}
