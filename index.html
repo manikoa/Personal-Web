@@ -1,65 +1,274 @@
 <!DOCTYPE html>
-
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>manikoa</title>
-        <link rel="icon" href="pictures/favicon.ico">
-        <link rel="stylesheet" href="css/styles.css">
-        <link rel="css/reset-worldview.css" rel="Stylesheet" type="text/css"/>
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnecta" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="https://fonts.googleapis.com/css2?family=Merriweather&family=Montserrat&family=Sacramento&display=swap" rel="stylesheet">
-    </head>
-    
 
-    <body>
-        <!--Hero Section start   -->
-        <div class="hero">
-            <div class="nav">
-                <div class="logo">
-                    <h2>Man<span>iko</span></h2>
-                </div>
-                <nav>
-                    <ul>
-                        <li><a href="#"> Home </a></li>
-                        <li><a href="Aboutme.html"> About Me </a></li>
-                        <li><a href="#"> Recommendations </a></li>
-                        <li><a href="Projects.html"> Projects </a></li>
-                        <li><a href="contactme.html"> Contact </a></li>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>manikoa</title>
+    <link rel="icon" href="../pictures/favicon.ico">
+    <!-- Include Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/custom.css">
+    <!-- Include Bootstrap JavaScript and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Include Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <!-- Include p5.js and other scripts -->
+    <script language="javascript" type="text/javascript" src="libraries/p5.js"></script>
+    <script language="javascript" src="libraries/p5.dom.js"></script>
+    <script language="javascript" type="text/javascript" src="background.js"></script>
+    <script language="javascript" type="text/javascript" src="particle.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inclusive+Sans:ital@1&family=Martian+Mono:wght@300;400&family=Mooli&family=Ubuntu:ital,wght@1,300&display=swap" rel="stylesheet">
+    <style>
+        .hero {
+            text-align: center;
+        }
+
+        .hero h2 {
+            margin: 0;
+        }
+
+        .navbar-brand h2 {
+            display: block;
+        }
+        /* Add these CSS rules to make the footer sticky */
+        body {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .container {
+            flex: 1;
+        }
+        .bi-braces {
+            color: purple;
+        }
+        /* Add this to your custom.css file */
+        .hidden {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 1s, transform 1s;
+        }
+
+        .visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        /* Add this to your custom.css file */
+        #animated-text {
+            display: inline-block;
+            animation: textAnimation 3s infinite alternate;
+        }
+
+        @keyframes textAnimation {
+            0% {
+            transform: scale(1);
+            opacity: 1;
+        }
+        100% {
+            transform: scale(1.1);
+            opacity: 0;
+        }
+        }
+        .center-content {
+            text-align: center;
+            border-right: 40%;
+        }
+        .content-wrapper {
+            width: 50%; /* Adjust the width as needed */
+            margin: 0 auto;
+            text-align: center;
+        }
+        font
+        font-family {
+            font-family: 'Inclusive Sans', sans-serif;
+            font-family: 'Martian Mono', monospace;
+            font-family: 'Mooli', sans-serif;
+            font-family: 'Ubuntu', sans-serif;
+        } 
+        h1 {
+            font-family: 'Martian Mono', monospace;
+        }
+        p {
+            font-family: 'Martian Mono', monospace;
+        }
+
+    </style>
+</head>
+
+
+<body>
+    <div class="hero">
+        <!-- Navbar with responsive navigation button -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container">
+                <a class="navbar-brand" href="#">
+                    <h2>Anthony</h2>
+                    <h2><i class="bi bi-braces"></i>Maniko </h2>
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="">Resume</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Professional Experience</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="Projects.html">Projects</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contactme.html">Contact</a>
+                        </li>
                     </ul>
-                </nav>
-            </div>
-        </div>
-            
-            <div class="content">
-                <h4>Hi, my name is</h4>
-                <h1>Anthony <span>Maniko.</span></h1>
-                <h3>I'm a Sophomore, Computer Science student at Whitman College.</a></h3>
-                <div class="newslatter">
-                    <form>
-                        <input type="email" name="email" id="mail" placeholder="Enter Your Email">
-                        <input type="submit" name="submit" value="Lets Start">
-                    </form>
                 </div>
-            </div>    
-        </div>
+            </div>
+        </nav>
+    </div>
+    <!-- Content Section -->
+    <div class="container mt-5 center-content">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <div class="content-wrapper">
+                    <h1><span id="animated-text">Hi, I'm Maniko</span></h1>
+                <!--<h3>About Me.</h3>-->
+                <p class="about-me-content hidden" id="about-me-text"> I’m a sophomore <a href="https://cs.whitman.edu">Computer Science</a> student at 
+                    <a href="https://www.whitman.edu/">Whitman College</a> aspiring to be a Software Engineer and Product Manager,
+                        and I'm passionate about creating impactful solutions through code. 
+                        <br><br>
 
-        <footer>
-            <div class="footer-content">
-                <p>Anthony Maniko</p>
-                <p>For more information about the work I do in Zambia and just about anything - Please connect with me using the links below.</p>
-                <div class="social">
-                    <a href="#"><i class="fa-brands fa-github"></i></a>
-                    <a href="#"><i class="fa-brands fa-linkedin"></i></a>
-                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
-                    <a href="#"><i class="fa-brands fa-instagram"></i></i></a>
+                        I’m a founder at Code Savanna. A non-profit organization that aims to encourage, connect, 
+                        and support the next generation of young leaders in technology and entrepreneurship in Zambia. 
+                        Our mission is to empower and equip these young people and provide them with the necessary tools, 
+                        resources, and mentorship to identify local challenges and develop innovative, sustainable 
+                        solutions that contribute to the socioeconomic development in Zambia. 
+                        <br><br>
+
+                        I'm also a member of the Associated Students of Whitman College (ASWC), the student 
+                        government on campus. I sit on the Sustainability Committee, which focuses more on 
+                        building a more sustainable campus.
+                        <br><br>
+
+                        I recently founded TalkLY - a school podcast that aims to promote understanding, celebrate,
+                        diversity, and empower voices that are too often silenced. By amplifying the stories and
+                        perspectives of people of color, TalkLY seeks to inspire, educate, and foster a sense 
+                        of community within the school and beyond.
+                        <br><br>
+
+                        I enjoy painting, drawing, taking walks to Pioneer Park, playing board games, and 
+                        reading about new technological advancements in my spare time. 
+                        <br><br>
+                        
+                        Thank you for taking the time to learn more about me! 
+                        Feel free to reach out if you’d like to connect.
+                        <br><br>
+                    </p>
+                   
+                </p>
                 </div>
             </div>
-            <br>
-            <p class="end">Copyright(c) 2023</p>
-        </footer>
+        </div>
+    </div>
+    
+    <!-- Footer Section -->
+    <footer class="bg-dark text-light py-4">
+        <div class="container text-center">
+            <div class="row">
+                <div class="col-md-3 offset-md-1 text-center">
+                    <h5>About Me</h5>
+                    <ul class="list-unstyled">
+                        <li class="d-inline"><a href="https://drive.google.com/drive/u/0/folders/1ECqG9-w885ejyZXgzHzIEqkALZIfOFjE" class="text-white"><i class="bi bi-file-earmark-person"></i> View My Resume</a>
+                        </li>
+                        <li class="d-inline"><a href="#" class="text-white"><i class="bi bi-journal-code"></i> Projects</a></li>
+                        <li>
+                            <a href="#" class="text-white" data-toggle="collapse" data-target="#contactDropdown">
+                                <i class="d-inline bi bi-person-lines-fill"></i> Contact Me
+                            </a>
+                            <div class="collapse" id="contactDropdown">
+                                <ul class="list-unstyled mt-3">
+                                    <li><i class="bi bi-form"></i><a href="contactme.html" class="text-white">Feedback</a></li>
+                                    <li><i class="bi bi-envelope"></i>  Email: manikoanthony@gmail.com</li>
+                                    <li><i class="bi bi-phone"></i>  Phone: +1 509 519 9511</li>
+                                    
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-3 offset-md-3 text-center">
+                    <h5>Connect With Me</h5>
+                    <ul class="list-unstyled">
+                        <li class="d-inline"><a href="https://www.linkedin.com/in/manikoanthony/" class="text-white"><i class="bi bi-linkedin"></i></i></a></li>
+                        <li class="d-inline"><a href="https://github.com/manikoa" class="text-white"><i class="bi bi-github"></i></a></li>
+                        <li class="d-inline"><a href="https://twitter.com/maniko01" class="text-white"><i class="bi bi-twitter-x"></i></i></a></li>
+                        <li class="d-inline"><a href="https://www.instagram.com/maniko01/" class="text-white"><i class="bi bi-instagram"></i></i></a></li>
+                        <li class="d-inline"><a href="#" class="text-white"><i class="bi bi-discord"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Delay the animation by 1 second (adjust as needed)
+            setTimeout(function () {
+                const aboutMeContent = document.querySelector(".about-me-content");
+                aboutMeContent.classList.add("visible");
+            }, 1000); // 1000 milliseconds = 1 second
+            });
+            const animatedText = document.getElementById("animated-text");
+            const textArray = ["Hi, I'm Maniko", "Welcome to my website", "Explore my projects", "Connect with me"];
+            let currentIndex = 0;
         
-    </body>
+            function updateText() {
+                animatedText.textContent = textArray[currentIndex];
+                currentIndex = (currentIndex + 1) % textArray.length;
+            }
+        
+            document.addEventListener("DOMContentLoaded", function () {
+                // Initial text update
+                updateText();
+        
+                // Set interval to update the text every 3 seconds
+                setInterval(updateText, 3000); // 3000 milliseconds = 3 seconds
+            });
+
+            document.addEventListener("DOMContentLoaded", function () {
+                // Delay the animation by 1 second (adjust as needed)
+                setTimeout(function () {
+                    const aboutMeText = document.getElementById("about-me-text");
+                    aboutMeText.classList.add("visible");
+        
+                    const textToType = aboutMeText.textContent;
+                    aboutMeText.textContent = '';
+        
+                    let charIndex = 0;
+        
+                    function typeAboutMeText() {
+                        if (charIndex < textToType.length) {
+                            aboutMeText.textContent += textToType.charAt(charIndex);
+                            charIndex++;
+                            setTimeout(typeAboutMeText, 50); // Adjust the typing speed (50 milliseconds)
+                        }
+                    }
+        
+                    // Start the typing animation for "About Me" after the delay
+                    setTimeout(typeAboutMeText, 1000); // Delay before typing starts (1000 milliseconds = 1 second)
+                }, 1000); // 1000 milliseconds = 1 second
+            });
+
+
+    </script>
+    
+    
+</body>
 </html>
