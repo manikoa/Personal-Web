@@ -35,6 +35,7 @@
         .navbar-brand h2 {
             display: block;
         }
+
         /* Add these CSS rules to make the footer sticky */
         body {
             min-height: 100vh;
@@ -45,9 +46,11 @@
         .container {
             flex: 1;
         }
+
         .bi-braces {
             color: purple;
         }
+
         /* Add this to your custom.css file */
         .hidden {
             opacity: 0;
@@ -59,6 +62,7 @@
             opacity: 1;
             transform: translateY(0);
         }
+
         /* Add this to your custom.css file */
         #animated-text {
             display: inline-block;
@@ -67,44 +71,71 @@
 
         @keyframes textAnimation {
             0% {
-            transform: scale(1);
-            opacity: 1;
+                transform: scale(1);
+                opacity: 1;
+            }
+
+            100% {
+                transform: scale(1.1);
+                opacity: 0;
+            }
         }
-        100% {
-            transform: scale(1.1);
-            opacity: 0;
-        }
-        }
+
         .center-content {
             text-align: center;
             border-right: 40%;
         }
+
         .content-wrapper {
-            width: 50%; /* Adjust the width as needed */
+            width: 60%;
+            /* Adjust the width as needed */
             margin: 0 auto;
             text-align: center;
         }
-        font
-        font-family {
+
+        font font-family {
             font-family: 'Inclusive Sans', sans-serif;
             font-family: 'Martian Mono', monospace;
             font-family: 'Mooli', sans-serif;
             font-family: 'Ubuntu', sans-serif;
-        } 
+        }
+
         h2 {
             font-family: 'Martian Mono', monospace;
         }
+
         p {
             font-family: 'Martian Mono', monospace;
         }
+
         /* Add space after paragraphs in the about-me-content */
         .about-me-content p {
-            margin-bottom: 20px; /* Adjust the value to control the spacing */
+            margin-bottom: 20px;
+            /* Adjust the value to control the spacing */
         }
 
         /* Add space at the top of the first paragraph */
         .about-me-content {
-            margin-top: 20px; /* Adjust the value to control the spacing */
+            margin-top: 20px;
+            /* Adjust the value to control the spacing */
+        }
+
+        /* Updated CSS for typing animation */
+        typing-animation {
+            overflow: hidden;
+            white-space: nowrap;
+            width: 0;
+            animation: typing 2s steps(30, end) forwards;
+        }
+
+        @keyframes typing {
+            from {
+                width: 0;
+            }
+
+            to {
+                width: 100%;
+            }
         }
 
     </style>
@@ -150,40 +181,37 @@
                 <div class="content-wrapper">
                     <h2><span id="animated-text">Hi, I'm Maniko</span></h2>
                 <!--<h3>About Me.</h3>-->
-                <p class="about-me-content hidden" id="about-me-text"> I’m a sophomore <a href="https://cs.whitman.edu">Computer Science</a> student at 
-                    <a href="https://www.whitman.edu/">Whitman College</a> aspiring to be a Software Engineer and Product Manager,
+                <p class="about-me-content typing-animation"> I’m a sophomore <a href="https://cs.whitman.edu">Computer Science</a> student at 
+                    <a href="https://www.whitman.edu/">Whitman College</a>
+                    aspiring to be a Software Engineer and Product Manager,
                         and I'm passionate about creating impactful solutions through code. 
                         <br><br>
-                        <p>
+                        
+                        I’m a founder at Code Savanna. A non-profit organization that aims to encourage, connect, 
+                        and support the next generation of young leaders in technology and entrepreneurship in Zambia. 
+                        Our mission is to empower and equip these young people and provide them with the necessary tools, 
+                        resources, and mentorship to identify local challenges and develop innovative, sustainable 
+                        solutions that contribute to the socioeconomic development in Zambia.<br><br>
+                        <br><br>
+                        I'm also a member of the Associated Students of Whitman College (ASWC), the student 
+                        government on campus. I sit on the Sustainability Committee, which focuses more on 
+                        building a more sustainable campus.<br><br>
+                        
+                        <br><br>
+                        I recently founded TalkLY - a school podcast that aims to promote understanding, celebrate,
+                        diversity, and empower voices that are too often silenced. By amplifying the stories and
+                        perspectives of people of color, TalkLY seeks to inspire, educate, and foster a sense 
+                        of community within the school and beyond.<br><br>
+                       
+                        <br><br>
+                        I enjoy painting, drawing, taking walks to Pioneer Park, playing board games, and 
+                        reading about new technological advancements in my spare time.<br><br>
+                        
+                        <br><br>
+                        Thank you for taking the time to learn more about me! 
+                        Feel free to reach out if you’d like to connect.<br><br>
 
-                            I’m a founder at Code Savanna. A non-profit organization that aims to encourage, connect, 
-                            and support the next generation of young leaders in technology and entrepreneurship in Zambia. 
-                            Our mission is to empower and equip these young people and provide them with the necessary tools, 
-                            resources, and mentorship to identify local challenges and develop innovative, sustainable 
-                            solutions that contribute to the socioeconomic development in Zambia. 
-
-                        </p>
-                        <p>
-                            I'm also a member of the Associated Students of Whitman College (ASWC), the student 
-                            government on campus. I sit on the Sustainability Committee, which focuses more on 
-                            building a more sustainable campus.
-
-                        </p>
-                        <p>
-                            I recently founded TalkLY - a school podcast that aims to promote understanding, celebrate,
-                            diversity, and empower voices that are too often silenced. By amplifying the stories and
-                            perspectives of people of color, TalkLY seeks to inspire, educate, and foster a sense 
-                            of community within the school and beyond.
-                        </p>
-                        <p>
-                            I enjoy painting, drawing, taking walks to Pioneer Park, playing board games, and 
-                            reading about new technological advancements in my spare time. 
-                        </p>
-                        <p>
-                            Thank you for taking the time to learn more about me! 
-                            Feel free to reach out if you’d like to connect.
-
-                        </p>
+                        
                     </p>
                 </p>
                 </div>
@@ -235,50 +263,51 @@
             setTimeout(function () {
                 const aboutMeContent = document.querySelector(".about-me-content");
                 aboutMeContent.classList.add("visible");
-            }, 1000); // 1000 milliseconds = 1 second
-            });
+            }, 2000); // 1000 milliseconds = 1 second
+    
             const animatedText = document.getElementById("animated-text");
             const textArray = ["Hi, I'm Maniko", "Welcome to my website", "Explore my projects", "Connect with me"];
             let currentIndex = 0;
-        
+            let currentText = '';
+            let charIndex = 0;
+            let animationFrame;
+    
             function updateText() {
-                animatedText.textContent = textArray[currentIndex];
+                currentText = textArray[currentIndex];
                 currentIndex = (currentIndex + 1) % textArray.length;
+                charIndex = 0;
+                animatedText.textContent = ''; // Clear the text
+                typeText();
             }
-        
-            document.addEventListener("DOMContentLoaded", function () {
-                // Initial text update
-                updateText();
-        
-                // Set interval to update the text every 3 seconds
-                setInterval(updateText, 3000); // 3000 milliseconds = 3 seconds
-            });
-
-            document.addEventListener("DOMContentLoaded", function () {
-                // Delay the animation by 1 second (adjust as needed)
-                setTimeout(function () {
-                    const aboutMeText = document.getElementById("about-me-text");
-                    aboutMeText.classList.add("visible");
-        
-                    const textToType = aboutMeText.textContent;
-                    aboutMeText.textContent = '';
-        
-                    let charIndex = 0;
-        
-                    function typeAboutMeText() {
-                        if (charIndex < textToType.length) {
-                            aboutMeText.textContent += textToType.charAt(charIndex);
-                            charIndex++;
-                            setTimeout(typeAboutMeText, 50); // Adjust the typing speed (50 milliseconds)
-                        }
-                    }
-        
-                    // Start the typing animation for "About Me" after the delay
-                    setTimeout(typeAboutMeText, 1000); // Delay before typing starts (1000 milliseconds = 1 second)
-                }, 1000); // 1000 milliseconds = 1 second
-            });
-
-
+    
+            function typeText() {
+                if (charIndex < currentText.length) {
+                    animatedText.textContent += currentText.charAt(charIndex);
+                    charIndex++;
+                    animationFrame = requestAnimationFrame(typeText); // Continue typing
+                } else {
+                    // Animation complete, wait for a while and then clear the text
+                    setTimeout(function () {
+                        cancelAnimationFrame(animationFrame); // Stop the animation
+                        clearText();
+                    }, 2000); // Wait for 1 second before clearing
+                }
+            }
+    
+            function clearText() {
+                // Clear the text smoothly
+                if (animatedText.textContent.length > 0) {
+                    animatedText.textContent = animatedText.textContent.slice(0, -1);
+                    animationFrame = requestAnimationFrame(clearText); // Continue clearing
+                }
+            }
+    
+            // Initial text update
+            updateText();
+    
+            // Set interval to update the text every 3 seconds
+            setInterval(updateText, 3000); // 3000 milliseconds = 3 seconds
+        });
     </script>
     
     
