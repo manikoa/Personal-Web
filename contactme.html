@@ -1,36 +1,63 @@
 <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 
-<html>
-    <head>
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>manikoa</title>
-        <link rel="icon" href="pictures/favicon.ico">
-        <link rel="stylesheet" href="css/styles.css">
-        <link rel="css/reset-worldview.css" rel="Stylesheet" type="text/css"/>
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnecta" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="https://fonts.googleapis.com/css2?family=Merriweather&family=Montserrat&family=Sacramento&display=swap" rel="stylesheet">
-    </head>
+    <!-- Include custom CSS -->
+    <style>
+        p {
+            font-family: 'Martian Mono', monospace;
+        }
+        li {
+            font-family: 'Martian Mono', monospace;
+        }
+        h3 {
+            font-family: 'Mooli', cursive;
+            font-size: 3rem;
+            font-weight: 600;
+            color: #000000;
+        }
+    </style>
+</head>
+<body>
+    <h3 class="text-center mt-5">Feedback</h3>
 
-    <body>
+    <section class="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 offset-md-2">
+                    <div class="about-text text-center">
+                        <p>I value open communication and welcome any inquiries, feedback, or collaborations from my fellow students, mentors, professors, etc.</p>
+                        <p>Whether you have questions about Code Savanna, want me to intern at your company, or simply volunteer, please reach out. I am committed to responding promptly and providing the information you need.</p>
 
-        <section class="about">
-            <div class="main">
-                <div class="about-text">
-                    <p>I value open communication and welcome any inquiries, feedback, or collaborations from my fellow students, mentors, professors, etc. <br>
-                        Whether you have questions about Code Savanna, want me to intern at your company, or simply volunteer, please reach out. I am committed to responding promptly and providing the information you need.</p> <br>
-                        <form class="" action="mailto:manikoanthony@gmail.com" method="post" enctype="text/plain">
-                            <label>Your Name:</label>
-                            <input type="text" name="YourName" value=""><br>
-                            <label>Your Email:</label>
-                            <input type="email" name="YourEmail" value=""><br>
-                            <label>Your Message:</label><br>
-                            <textarea name="yourMessage" rows="10" cols="30"></textarea><br>
-                            <input type="submit" value="Submit">
+                        <form action="mailto:manikoanthony@gmail.com" method="post" enctype="text/plain">
+                            <div class="form-group">
+                                <label for="YourName">Your Name:</label>
+                                <input type="text" class="form-control" id="YourName" name="YourName">
+                            </div>
+                            <div class="form-group">
+                                <label for="YourEmail">Your Email:</label>
+                                <input type="email" class="form-control" id="YourEmail" name="YourEmail">
+                            </div>
+                            <div class="form-group">
+                                <label for="YourMessage">Your Message:</label>
+                                <textarea class="form-control" id="YourMessage" name="YourMessage" rows="5"></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-dark">Submit</button>
                         </form>
+                    </div>
                 </div>
             </div>
-        </section>
-        
-    </body>
+        </div>
+        <div class="text-center mt-3">
+            <a href="index.html" class="btn btn-dark">Home</a>
+        </div>
+    </section>
+</body>
 </html>
